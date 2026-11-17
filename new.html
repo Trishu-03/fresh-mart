@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            padding-top: 52px;
+        }
+        nav{
+            border-bottom: 2px solid lightgray;
+            /* padding:10px; */
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 60px;
+            height: 50px;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            top:0;
+
+        }
+        .logo{
+            /* border: 1px solid red; */
+            color: green;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            
+        }
+        .input{
+            /* border: 1px solid green; */
+            width:40%;
+
+            
+            
+        }
+        .input input{
+            width:100%;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .items{
+            /* border: 1px solid blue; */
+            display:flex;
+            width:20%;
+            justify-content: space-between;
+            /* align-items: center; */
+
+            
+        }
+        .items:hover{
+            cursor: pointer;
+        }
+        .items li{
+            list-style: none;
+        }
+        .main{
+            border:1px solid rgb(9, 9, 9);
+            height:35vh;
+            border-radius:10px;
+            padding:5px 30px;
+            margin: 0px 30px;
+            background: linear-gradient(to right,rgb(207, 234, 233),rgb(105, 214, 194));
+            display:flex;
+            justify-content: space-between;
+            
+        }
+        .main h1{
+            color:black;
+            margin-bottom:20px;
+            
+            
+        }
+        .main p{
+            color:rgb(24, 21, 21);
+            margin-bottom: 20px;
+
+        }
+        .main button{
+            padding: 10px 15px 10px 15px;
+            border-radius: 15px;
+            background-color: green;
+            border:none;
+            
+        }
+        .main button:hover{
+            cursor: pointer;
+        }
+        .shop{
+           background-color: rgb(228, 225, 225);
+            padding:5px 20px;
+            font-family:arial;
+            border-radius:20px ;
+            margin:10px;
+            position: sticky;
+            top:52px;
+            
+        }
+        .cp{
+            display: flex;
+            gap: 20px;
+        }
+        .c{
+            border:2px solid rgb(37, 36, 36);
+            height:100px;
+            width:100px;
+            border-radius:50%;
+            background-color: rgb(184, 144, 196);
+           
+        }
+        .c1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .itemsshop{
+            height: 70vh ;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows: 1fr 1fr ;
+            align-items: center;
+            
+        }
+        .itemshop{
+            margin-left:28px;
+        }
+        .product{
+            height:175px;
+            width:135px;
+            margin-left: 25px;;
+            background-color: rgb(238, 238, 235);
+            /* display:flex;
+            flex-direction: column; */
+            justify-content:space-evenly;
+            border-radius: 5px;
+            padding:10px;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .pitem{
+            height:115px;
+            width:115px;
+            background-color: rgb(188, 190, 190);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about{
+            width: 93vw;
+            height:20vh;
+            border:2px solid red;
+            margin:10px 25px;
+            background-color: rgb(225, 219, 208);
+            border-radius: 5px;
+            padding:5px;
+        }
+        .Footer{
+           
+            height:60px ;
+            width:100vw;
+            display :flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(24, 24, 24);
+            color:white;
+        }
+        @media(max-width:600px){
+            nav{
+                display:grid;
+                grid-template-areas: "logo navitems"
+                                      "Input Input";
+                padding:10px;
+                height:auto;
+                gap:10px;
+            }
+            .logo{
+                grid-area:logo;
+            }
+            .input{
+                
+                grid-area:Input;
+                width:100%;
+            }
+            .items{
+                grid-area:navitems;
+                gap:5px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">FreshMart</div>
+        <div class="input">
+            <input type="text" placeholder="Search fruits,vegetable...">
+        </div>
+        <div class="items">
+            <li>Home</li>
+            <li>Product</li>
+            <li>Cart</li>
+        </div>
+    </nav>
+    <main>
+        <div class="main">
+            <div class="box1">
+                <br>
+                <h1>Fresh groceries<br>delivered to you</h1>
+                <p>Fruits, vegetable and daily essentials delivered fresh</p>
+                <button>Shop Now</button>
+
+            </div>
+            <div class="cart">
+              <p style="font-size: 150px;">🛒</p>  
+            </div>
+            </div>
+            
+        <div class="shop">
+            <h2>Shop by category</h2>
+        <div class="cp">
+            <div class="c1">
+            <div class="c"><p style="font-size: 65px;;">🍐</p></div>
+               Fruits 
+            </div>
+            <div class="c1">
+            <div class="c"><p style="font-size: 65px;;">🫑</p></div>
+               Vegetable 
+            </div>
+            <div class="c1">
+            <div class="c"><p style="font-size: 65px;;">🥛</p></div>
+             Dairy 
+            </div>
+            <div class="c1">
+            <div class="c"><p style="font-size: 65px;;">🥯</p></div>
+            Bakery
+            </div>
+            <div class="c1">
+            <div class="c"><p style="font-size: 65px;;">🥤</p></div>
+            Drinks
+            </div>
+        </div>
+        </div>
+        
+        <div class="itemshop">
+            <h2>Popular products</h2>
+            </div>
+            <div class="itemsshop">
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🍎</p></div>
+            Fruits apple 
+        <br>₹ 100/kg
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🥦</p></div>
+            Fresh Broccoli
+             <br>₹ 130/kg
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🥛</p></div>
+              Fresh milk
+               <br>₹ 75/kg
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🍞</p></div>
+            Brown bread 
+             <br>₹ 45/packet
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🍊</p></div>
+            Fresh oranges
+             <br>₹ 120/kg
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🍌</p></div>
+            Banana
+             <br>₹ 60/dozen
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🍅</p></div>
+            Fresh vegetables
+             <br>₹ 190/kg
+        </div>
+        <div class="product">
+            <div class = " pitem"><p style="font-size: 65px;">🧃</p></div>
+            Fresh juice
+             <br  style="color: aqua;">₹ 70/item
+        </div>
+        </div>
+        <div class="about"><h3>Why FreshMart ?</h3><p> </p></div>
+        
+        
+        
+
+    </main>
+    <footer>
+    <div class = "Footer"> FreshMart @2026|CSS Position Practice
+
+    </div>
+    </footer>
+</body>
+</html>
